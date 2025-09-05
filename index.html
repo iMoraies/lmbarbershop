@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>BL DO CORTE - Agendamento</title>
+</head>
+
+<body>
+    <div class="container">
+        <img class="logotipo" src="./images/lm.png" alt="Logotipo LM Barber">
+        <h1>BL DO CORTE</h1>
+        <h2>AGENDE SEU HORÁRIO</h2>
+        <h3 class="subtitle">Chama na preferência.</h3>
+
+        <form id="formAgendamento">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Nome e Sobrenome" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" placeholder="(99) 00000-0000" required>
+
+            <label class="serv">Serviços:</label>
+            <h3 class="subh3">Clique para adicionar ao carrinho</h3>
+            <div id="listaServicos" class="lista-servicos">
+                <div class="servico-item" data-nome="Sobrancelha" data-preco="5">R$5,00 | Sobrancelha</div>
+                <div class="servico-item" data-nome="Barba" data-preco="15">R$15,00 | Barba</div>
+                <div class="servico-item" data-nome="Corte máquina" data-preco="15">R$15,00 | Corte Máquina</div>
+                <div class="servico-item" data-nome="Corte disfarce" data-preco="30">R$30,00 | Corte disfarce</div>
+                <div class="servico-item" data-nome="Corte disfarce + pigmentação" data-preco="40">R$40,00 | Corte
+                    Disfarce + Pigmentação</div>
+                <div class="servico-item" data-nome="Corte disfarce + barba" data-preco="45">R$45,00 | Corte Disfarce +
+                    Barba</div>
+            </div>
+
+            <!-- Carrinho -->
+            <div id="carrinho" class="carrinho">
+                <h4>Serviços Selecionados:</h4>
+                <ul id="itensCarrinho"></ul>
+                <p class="totalprice" id="total">Total: R$0</p>
+            </div>
+
+            <label for="seubarbeiro">Barbeiro:</label>
+            <select id="seubarbeiro" required>
+                <option value="Lucas Matheus">Lucas Matheus</option>
+            </select>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+
+            <label for="hora">Horário:</label>
+            <input type="time" id="hora" required readonly>
+
+            <button type="submit">Confirmar no WhatsApp</button>
+        </form>
+
+        <!-- Agenda dinâmica -->
+        <div id="agenda" class="agenda">
+            <h3>Horários Disponíveis</h3>
+            <h4 class="datadescription">Escolha uma data para ver os horários disponíveis</h4>
+            <div id="diasContainer"></div>
+        </div>
+        <p class="moraes">github.com/iMoraies<br><br>Desenvolvido por: Matheus<br> (21) 99045-6868</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
