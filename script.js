@@ -172,6 +172,6 @@ document.getElementById("formAgendamento").addEventListener("submit", function (
 *Telefone:* ${telefone}`;
 
     const numeroBarbearia = "5521987902255";
-    const url = `https://wa.me/${numeroBarbearia}?text=${encodeURIComponent(mensagem)}`;
+    const url = `https://api.whatsapp.com/send?phone=${numeroBarbearia}&text=${encodeURIComponent(mensagem)}`;
     window.open(url, "_blank");
 });
