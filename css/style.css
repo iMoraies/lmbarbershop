@@ -1,6 +1,6 @@
 body {
     font-family: "Montserrat", sans-serif;
-    background: url("./images/barbershop.jpg") repeat;
+    background: url("../images/barbershop.jpg") repeat;
     background-size: auto;
     background-color: black;
     display: flex;
@@ -99,7 +99,6 @@ input {
     width: 93%;
 }
 
-/* === Estilos da Agenda === */
 .agenda {
     margin-top: 30px;
     padding: 15px;
@@ -150,7 +149,6 @@ input {
     padding-left: 17px;
 }
 
-/* === Lista de serviços === */
 .lista-servicos {
     display: flex;
     flex-direction: column;
